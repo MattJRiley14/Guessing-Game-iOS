@@ -52,9 +52,10 @@ class ViewController: UIViewController {
         userInputTextField.placeholder = ""
     }
     
-    @IBAction func test(_ sender: Any) {
+    @IBAction func tappedInsideTextField(_ sender: Any) {
         userInputTextField.placeholder = ""
     }
+    
     
     @IBAction func submitButtonTapped(_ sender: Any) {
         if userInputTextField.text == "Show Answer" {

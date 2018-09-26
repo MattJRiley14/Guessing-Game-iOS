@@ -32,8 +32,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xUJ-kC-aws">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xUJ-kC-aws">
                                 <rect key="frame" x="0.0" y="20" width="133" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Reset Game">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -42,13 +43,14 @@
                                     <action selector="resetButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EBJ-9C-GoO"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vwU-Fr-d6E">
-                                <rect key="frame" x="333" y="20" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vwU-Fr-d6E">
+                                <rect key="frame" x="220" y="20" width="155" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GrR-8M-93J">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GrR-8M-93J">
                                 <rect key="frame" x="0.0" y="150" width="375" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -62,7 +64,7 @@
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="tappedInsideTextField:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WDQ-9B-Cwb"/>
-                                    <action selector="test:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="xax-lZ-H3N"/>
+                                    <action selector="tappedInsideTextField:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="q60-4T-jve"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QZM-1U-OsS">
@@ -106,13 +108,6 @@
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GrR-8M-93J" secondAttribute="trailing" id="7H4-tl-PDm"/>
                             <constraint firstItem="GrR-8M-93J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="D28-Bd-dC7"/>
-                            <constraint firstItem="GrR-8M-93J" firstAttribute="top" secondItem="xUJ-kC-aws" secondAttribute="bottom" constant="100" id="Mln-c8-CIa"/>
-                            <constraint firstItem="xUJ-kC-aws" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="N8D-Jm-HQx"/>
-                            <constraint firstItem="vwU-Fr-d6E" firstAttribute="leading" secondItem="xUJ-kC-aws" secondAttribute="trailing" constant="100" id="PV6-n4-xRp"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vwU-Fr-d6E" secondAttribute="trailing" id="ZCQ-sg-bLt"/>
-                            <constraint firstItem="vwU-Fr-d6E" firstAttribute="leading" secondItem="xUJ-kC-aws" secondAttribute="trailing" constant="200" id="bOn-hJ-wah"/>
-                            <constraint firstItem="xUJ-kC-aws" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="jUX-bv-0YJ"/>
-                            <constraint firstItem="vwU-Fr-d6E" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="rwu-Eb-cvH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
