@@ -18,33 +18,38 @@ class ViewController: UIViewController {
     @IBOutlet weak var submitButtonText: UIButton!
     @IBOutlet weak var timesPlayedLabel: UILabel!
     
+    var randomNumber = 0
+    var numberOfTries = 5
+    var timesPlayed = 0
+    var guessedNumber: Int? = nil
+
+    
+    func reset() {
+        randomNumber = Int(arc4random_uniform(100)) + 1
+        numberOfTries = 5
+        userInputTextField.text = "Enter response here"
+        guessingStatusLabel.text = "Guess number between 1 and 100"
+        guessedNumber = nil
+        attemptsLabel.text = "Attempts left: \(numberOfTries)"
+        timesPlayedLabel.text = "Number of times you have played: \(timesPlayed)"
+        submitButtonText.isEnabled = true
+        greetingLabel.text = "Welcome to the Guessing Game"
+    }
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        greetingLabel.text = "Welcome to the Guessing Game"
-        userInputTextField.text = "Enter guess here"
-        guessingStatusLabel.text = "Guess a number between 1 and 100"
-        attemptsLabel.text = "Attempts left: 5"
-        timesPlayedLabel.text = ""
+        reset()
     }
     
-    var randomNumber = Int(arc4random_uniform(100)) + 1
-    var numberOfTries = 5
-    var guessedNumber: Int? = nil
-    var timesPlayed = 0
-    
-
     
     @IBAction func resetButtonTapped(_ sender: Any) {
-        randomNumber = Int(arc4random_uniform(100)) + 1
-        numberOfTries = 5
-        userInputTextField.text = "Enter guess here"
-        guessingStatusLabel.text = "Guess a number between 1 and 100"
-        guessedNumber = nil
-        attemptsLabel.text = "Attempts left: \(numberOfTries)"
         timesPlayed += 1
-        timesPlayedLabel.text = "Number of times you have played: \(timesPlayed)"
+        reset()
     }
+    
+    
     
     @IBAction func submitButtonTapped(_ sender: Any) {
         if userInputTextField.text == "Show Answer" {
@@ -69,29 +74,27 @@ class ViewController: UIViewController {
         guard let guessedNumber = guessedNumber else {
             return
         }
-
-        if guessedNumber == randomNumber {
-            guessingStatusLabel.text = "YOU WON!!!"
-        } else if guessedNumber > randomNumber {
-            numberOfTries -= 1
-            guessingStatusLabel.text = "Guess Lower"
-            if numberOfTries >= 0 {
+        
+        if numberOfTries != 0 {
+            if guessedNumber == randomNumber {
+                guessingStatusLabel.text = "YOU WON!!!"
+                submitButtonText.isEnabled = false
+            } else if guessedNumber > randomNumber {
+                numberOfTries -= 1
+                guessingStatusLabel.text = "Guess Lower"
                 attemptsLabel.text = "Attempts left: \(numberOfTries)"
-            }
-        } else if guessedNumber < randomNumber {
-            numberOfTries -= 1
-            guessingStatusLabel.text = "Guess Higher"
-            if numberOfTries >= 0 {
+            } else if guessedNumber < randomNumber {
+                numberOfTries -= 1
+                guessingStatusLabel.text = "Guess Higher"
                 attemptsLabel.text = "Attempts left: \(numberOfTries)"
             }
         }
         
-        if numberOfTries <= 0 {
+        if numberOfTries == 0 {
             guessingStatusLabel.text = "GAME OVER!!! The answer was \(randomNumber)"
+            submitButtonText.isEnabled = false
         }
-        
     }
-    
 }
 
 
