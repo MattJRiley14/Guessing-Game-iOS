@@ -27,12 +27,14 @@ class ViewController: UIViewController {
     func reset() {
         randomNumber = Int(arc4random_uniform(100)) + 1
         numberOfTries = 5
-        userInputTextField.text = "Enter response here"
+        userInputTextField.isHidden = false
         guessingStatusLabel.text = "Guess number between 1 and 100"
         guessedNumber = nil
         attemptsLabel.text = "Attempts left: \(numberOfTries)"
         timesPlayedLabel.text = "Number of times you have played: \(timesPlayed)"
-        submitButtonText.isEnabled = true
+        submitButtonText.isHidden = false
+        userInputTextField.text = ""
+        userInputTextField.placeholder = "Enter Guess Here"
         greetingLabel.text = "Welcome to the Guessing Game"
     }
 
@@ -47,9 +49,12 @@ class ViewController: UIViewController {
     @IBAction func resetButtonTapped(_ sender: Any) {
         timesPlayed += 1
         reset()
+        userInputTextField.placeholder = ""
     }
     
-    
+    @IBAction func test(_ sender: Any) {
+        userInputTextField.placeholder = ""
+    }
     
     @IBAction func submitButtonTapped(_ sender: Any) {
         if userInputTextField.text == "Show Answer" {
@@ -92,7 +97,8 @@ class ViewController: UIViewController {
         
         if numberOfTries == 0 {
             guessingStatusLabel.text = "GAME OVER!!! The answer was \(randomNumber)"
-            submitButtonText.isEnabled = false
+            submitButtonText.isHidden = true
+            userInputTextField.isHidden = true
         }
     }
 }
