@@ -83,7 +83,7 @@ class ViewController: UIViewController {
     // Function runs when Submit button is tapped
     @IBAction func submitButtonTapped(_ sender: Any) {
         // Reveals number is user enters easter egg password
-        if userInputTextField.text == "Show Answer" {
+        if userInputTextField.text == "Bosco" {
             guessingStatusLabel.text = "The number is: \(String(randomNumber))"
             return
         }
