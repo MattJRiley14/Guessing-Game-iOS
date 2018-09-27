@@ -136,5 +136,14 @@ class ViewController: UIViewController {
     }
 }
 
+/*
+INSTRUCTIONS
+1. Allow the user to select an upper bound for the selected random number.
+2. Add functionality to store how many times the user has played the game, how many times they’ve won, and how many times they have lost.
+3. As an extra challenge, try to figure out how to put this information on another screen.
+4. Add functionality to allow the user to customize the game in different ways (such as by changing the background color).
+5. As an extra challenge, try to figure out how to do this on another screen.
+*/
+
 
 
