@@ -12,6 +12,9 @@
 		C9C06F8F21554868003A4844 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9C06F8D21554868003A4844 /* Main.storyboard */; };
 		C9C06F9121554869003A4844 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9C06F9021554869003A4844 /* Assets.xcassets */; };
 		C9C06F9421554869003A4844 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9C06F9221554869003A4844 /* LaunchScreen.storyboard */; };
+		C9C084B4215E610000EEC1E2 /* GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C084B3215E610000EEC1E2 /* GIF.swift */; };
+		C9C084BE21630F3200EEC1E2 /* ThumbsDown.gif in Resources */ = {isa = PBXBuildFile; fileRef = C9C084BD21630F3200EEC1E2 /* ThumbsDown.gif */; };
+		C9C084C021630F4400EEC1E2 /* ThumbsUp.gif in Resources */ = {isa = PBXBuildFile; fileRef = C9C084BF21630F4400EEC1E2 /* ThumbsUp.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		C9C06F9021554869003A4844 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C9C06F9321554869003A4844 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C9C06F9521554869003A4844 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9C084B3215E610000EEC1E2 /* GIF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIF.swift; sourceTree = "<group>"; };
+		C9C084BD21630F3200EEC1E2 /* ThumbsDown.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = ThumbsDown.gif; path = "../../../../THUMB GIFS FOR GUESSING GAME/ThumbsDown.gif"; sourceTree = "<group>"; };
+		C9C084BF21630F4400EEC1E2 /* ThumbsUp.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = ThumbsUp.gif; path = "../../../../THUMB GIFS FOR GUESSING GAME/ThumbsUp.gif"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +64,11 @@
 				C9C06F8B21554868003A4844 /* ViewController.swift */,
 				C9C06F8D21554868003A4844 /* Main.storyboard */,
 				C9C06F9021554869003A4844 /* Assets.xcassets */,
+				C9C084BF21630F4400EEC1E2 /* ThumbsUp.gif */,
+				C9C084BD21630F3200EEC1E2 /* ThumbsDown.gif */,
 				C9C06F9221554869003A4844 /* LaunchScreen.storyboard */,
 				C9C06F9521554869003A4844 /* Info.plist */,
+				C9C084B3215E610000EEC1E2 /* GIF.swift */,
 			);
 			path = "Guessing-Game";
 			sourceTree = "<group>";
@@ -123,7 +132,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9C06F9421554869003A4844 /* LaunchScreen.storyboard in Resources */,
+				C9C084BE21630F3200EEC1E2 /* ThumbsDown.gif in Resources */,
 				C9C06F9121554869003A4844 /* Assets.xcassets in Resources */,
+				C9C084C021630F4400EEC1E2 /* ThumbsUp.gif in Resources */,
 				C9C06F8F21554868003A4844 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9C084B4215E610000EEC1E2 /* GIF.swift in Sources */,
 				C9C06F8C21554868003A4844 /* ViewController.swift in Sources */,
 				C9C06F8A21554868003A4844 /* AppDelegate.swift in Sources */,
 			);

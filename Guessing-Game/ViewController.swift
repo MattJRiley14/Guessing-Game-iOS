@@ -18,6 +18,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var resetButtonText: UIButton!
     @IBOutlet weak var submitButtonText: UIButton!
     @IBOutlet weak var timesPlayedLabel: UILabel!
+    @IBOutlet weak var thumbsUp: UIImageView!
+    @IBOutlet weak var thumbsDown: UIImageView!
     
     // Variable for random number to be reset after each game
     var randomNumber = 0
@@ -27,6 +29,12 @@ class ViewController: UIViewController {
     var timesPlayed = 0
     // variable optional for user guesses (Set as optional nil so it can be verified below)
     var guessedNumber: Int? = nil
+    
+    
+    let thumbsUpGIF = UIImage.gifImageWithName("ThumbsUp")
+    let thumbsDownGIF = UIImage.gifImageWithName("ThumbsDown")
+
+
     
     // Reset function to be run when screen loads and each time reset button it tapped
     func reset() {
@@ -52,6 +60,11 @@ class ViewController: UIViewController {
         self.view.backgroundColor = UIColor.brown
         // Enables sumbitButton
         submitButtonText.isEnabled = true
+        
+        thumbsUp.isHidden = true
+        thumbsDown.isHidden = true
+
+        
     }
     
     
@@ -63,6 +76,9 @@ class ViewController: UIViewController {
         greetingLabel.text = "Welcome to the Guessing Game"
         // Runs reset function
         reset()
+        
+        
+        
     }
     
     // Fuction runs when reset button it tapped
@@ -113,6 +129,10 @@ class ViewController: UIViewController {
                 submitButtonText.isEnabled = false
                 submitButtonText.isHidden = true
                 self.view.backgroundColor = UIColor.blue
+                
+                thumbsUp.image = thumbsUpGIF
+                thumbsUp.isHidden = false
+                
                 // If guess is too high, then try/attempt will be removed and user will be told to Guess Lower
             } else if guessedNumber > randomNumber {
                 numberOfTries -= 1
@@ -132,7 +152,12 @@ class ViewController: UIViewController {
             submitButtonText.isHidden = true
             userInputTextField.isHidden = true
             self.view.backgroundColor = UIColor.red
+            
+            thumbsDown.image = thumbsDownGIF
+            thumbsDown.isHidden = false
+            
         }
+        userInputTextField.text = ""
     }
 }
 

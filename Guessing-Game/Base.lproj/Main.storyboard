@@ -66,11 +66,19 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4t-mC-LfQ">
-                                <rect key="frame" x="166.5" y="402" width="42" height="21"/>
+                                <rect key="frame" x="166.5" y="362" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tKY-ms-fV5">
+                                <rect key="frame" x="0.0" y="459" width="375" height="208"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A0w-YW-MMW">
+                                <rect key="frame" x="0.0" y="388" width="375" height="279"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -88,6 +96,7 @@
                             <constraint firstItem="fXg-PT-sZM" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="fEB-vk-ziP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vwU-Fr-d6E" secondAttribute="trailing" id="hOu-NV-47v"/>
                             <constraint firstItem="vwU-Fr-d6E" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="moq-sH-K5h"/>
+                            <constraint firstItem="a4t-mC-LfQ" firstAttribute="top" secondItem="cyM-84-g81" secondAttribute="bottom" constant="10" id="rdg-3J-gZ5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -97,6 +106,8 @@
                         <outlet property="guessingStatusLabel" destination="QZM-1U-OsS" id="cmw-Dp-Y8M"/>
                         <outlet property="resetButtonText" destination="xUJ-kC-aws" id="v85-Un-JLV"/>
                         <outlet property="submitButtonText" destination="cyM-84-g81" id="pRy-ET-cmh"/>
+                        <outlet property="thumbsDown" destination="A0w-YW-MMW" id="cyK-En-s34"/>
+                        <outlet property="thumbsUp" destination="tKY-ms-fV5" id="5F7-XC-Lnw"/>
                         <outlet property="timesPlayedLabel" destination="a4t-mC-LfQ" id="Ach-Fe-A0Q"/>
                         <outlet property="userInputTextField" destination="fXg-PT-sZM" id="Ygr-wn-Znf"/>
                     </connections>
